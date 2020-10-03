@@ -1,0 +1,19 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+jobs:
+- job: VS2019
+  displayName: VS2019
+  pool:
+    vmImage: 'windows-2019'
+
+  steps:
+  # show environmental variables for debug.
+  - script: where qmake
+    displayName: where qmake
+
